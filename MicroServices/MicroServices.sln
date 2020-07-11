@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServices.Domain.Core", "MicroServices.Domain.Core\MicroServices.Domain.Core.csproj", "{B7B79F3C-1D80-45B6-95F3-7D434C78E3AE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServices.Infrastructure.Bus", "MicroServices.Infrastructure.Bus\MicroServices.Infrastructure.Bus.csproj", "{9FFAC0CC-C026-4D04-9EC2-03E403CAA7EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,12 +27,17 @@ Global
 		{B7B79F3C-1D80-45B6-95F3-7D434C78E3AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7B79F3C-1D80-45B6-95F3-7D434C78E3AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7B79F3C-1D80-45B6-95F3-7D434C78E3AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FFAC0CC-C026-4D04-9EC2-03E403CAA7EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FFAC0CC-C026-4D04-9EC2-03E403CAA7EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FFAC0CC-C026-4D04-9EC2-03E403CAA7EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FFAC0CC-C026-4D04-9EC2-03E403CAA7EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B7B79F3C-1D80-45B6-95F3-7D434C78E3AE} = {3674FD44-5599-4CCF-8C72-5777483672AF}
+		{9FFAC0CC-C026-4D04-9EC2-03E403CAA7EA} = {1A1749E0-3B23-4A9B-A9C0-A6AE56E9697F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0D645A8E-370E-4F1E-83DE-46534DA6A0D7}

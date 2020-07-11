@@ -1,8 +1,6 @@
 ﻿using MicroServices.Domain.Core.Events;
 
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace MicroServices.Domain.Core.Commands
 {
