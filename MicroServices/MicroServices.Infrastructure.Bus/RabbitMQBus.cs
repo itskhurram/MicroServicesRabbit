@@ -81,7 +81,6 @@ namespace MicroServices.Infrastructure.Bus
             consumer.Received += Consumer_Received;
             channel.BasicConsume(eventName, true, consumer);
         }
-
         private async Task Consumer_Received(object sender, BasicDeliverEventArgs e)
         {
             string eventName = e.RoutingKey;
@@ -96,7 +95,6 @@ namespace MicroServices.Infrastructure.Bus
                 throw;
             }
         }
-
         private async Task ProcessEvent(string eventName, string message)
         {
             if(_handlers.ContainsKey(eventName))
