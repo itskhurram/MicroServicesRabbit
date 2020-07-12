@@ -1,3 +1,3 @@
 # Micro Services Implementation with .Net Core
-Micro Services Implementation with EntityFramework & RabbitMQ Bus Service
+Micro Services Implementation with DotNetCore, EntityFramework & RabbitMQ Bus Service
 
