@@ -4,6 +4,8 @@ using MicroServices.Banking.Application.Interfaces;
 using MicroServices.Banking.Application.Services;
 using MicroServices.Banking.Data.Context;
 using MicroServices.Banking.Data.Repository;
+using MicroServices.Banking.Domain.CommandHandlers;
+using MicroServices.Banking.Domain.Commands;
 using MicroServices.Banking.Domain.Interfaces;
 using MicroServices.Domain.Core.Bus;
 using MicroServices.Infrastructure.Bus;
@@ -26,6 +28,9 @@ namespace MicroServices.Infrastructure.IOC
                 var mediator = serviceProvider.GetService<IMediator>();
                 return new RabbitMQBus(mediator);
             });
+
+            //Domain Banking Commands
+            services.AddTransient<IRequestHandler<CreateTransferCommand,bool>, TransferCommandHandler>();
 
             //Application Services
             services.AddTransient<IAccountService, AccountService>();

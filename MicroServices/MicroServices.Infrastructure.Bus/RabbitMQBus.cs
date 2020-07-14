@@ -39,7 +39,7 @@ namespace MicroServices.Infrastructure.Bus
             {
                 using (IModel channel = connection.CreateModel())
                 {
-                    string eventName = channel.GetType().Name;
+                    string eventName = @event.GetType().Name;
                     channel.QueueDeclare(eventName, false, false, false, null);
                     var message = JsonConvert.SerializeObject(@event);
                     var body = Encoding.UTF8.GetBytes(message);
