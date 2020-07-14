@@ -29,13 +29,31 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{AF19CB6E-E4DC-4A8D-879B-F38F492FC963}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServices.Banking.API", "MicroServices.Banking.API\MicroServices.Banking.API.csproj", "{925D6D53-8D74-4F90-9A17-43EB94F5CED9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServices.Banking.API", "MicroServices.Banking.API\MicroServices.Banking.API.csproj", "{925D6D53-8D74-4F90-9A17-43EB94F5CED9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServices.Banking.Application", "MicroServices.Banking.Application\MicroServices.Banking.Application.csproj", "{3747CEE1-3420-47C1-BC19-FCE58CC8636E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServices.Banking.Application", "MicroServices.Banking.Application\MicroServices.Banking.Application.csproj", "{3747CEE1-3420-47C1-BC19-FCE58CC8636E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServices.Banking.Data", "MicroServices.Banking.Data\MicroServices.Banking.Data.csproj", "{767104A5-1187-4563-831D-666392B279A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServices.Banking.Data", "MicroServices.Banking.Data\MicroServices.Banking.Data.csproj", "{767104A5-1187-4563-831D-666392B279A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServices.Banking.Domain", "MicroServices.Banking.Domain\MicroServices.Banking.Domain.csproj", "{872B57B0-921B-47AA-8D19-DE79BBB21F5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServices.Banking.Domain", "MicroServices.Banking.Domain\MicroServices.Banking.Domain.csproj", "{872B57B0-921B-47AA-8D19-DE79BBB21F5C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Transfer", "Transfer", "{E94F58C3-7948-4AE4-9D6C-9712262BDE9C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{1064B67E-5DC9-4AD4-B0F0-E82302368BDF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{DF6635E9-11AA-4CC1-92F5-B38B5782AD7E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{13294388-335B-41D5-8B3E-4D0DADB2288B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{CEF46290-527A-4E34-9B88-594E2799038D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServices.Transfer.API", "MicroServices.Transfer.API\MicroServices.Transfer.API.csproj", "{74B94552-249C-4E71-82D4-89FFEC22933A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServices.Transfer.Application", "MicroServices.Transfer.Application\MicroServices.Transfer.Application.csproj", "{11F9956D-3FBF-406A-97DB-39D42FA2A826}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServices.Transfer.Data", "MicroServices.Transfer.Data\MicroServices.Transfer.Data.csproj", "{03AE20DD-9740-4D3A-8FB8-716F9CE1325C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServices.Transfer.Domain", "MicroServices.Transfer.Domain\MicroServices.Transfer.Domain.csproj", "{2A4A5C93-218D-410E-90CB-9B194D4CA909}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +89,22 @@ Global
 		{872B57B0-921B-47AA-8D19-DE79BBB21F5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{872B57B0-921B-47AA-8D19-DE79BBB21F5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{872B57B0-921B-47AA-8D19-DE79BBB21F5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74B94552-249C-4E71-82D4-89FFEC22933A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74B94552-249C-4E71-82D4-89FFEC22933A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74B94552-249C-4E71-82D4-89FFEC22933A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74B94552-249C-4E71-82D4-89FFEC22933A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11F9956D-3FBF-406A-97DB-39D42FA2A826}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11F9956D-3FBF-406A-97DB-39D42FA2A826}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11F9956D-3FBF-406A-97DB-39D42FA2A826}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11F9956D-3FBF-406A-97DB-39D42FA2A826}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03AE20DD-9740-4D3A-8FB8-716F9CE1325C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03AE20DD-9740-4D3A-8FB8-716F9CE1325C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03AE20DD-9740-4D3A-8FB8-716F9CE1325C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03AE20DD-9740-4D3A-8FB8-716F9CE1325C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A4A5C93-218D-410E-90CB-9B194D4CA909}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A4A5C93-218D-410E-90CB-9B194D4CA909}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A4A5C93-218D-410E-90CB-9B194D4CA909}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A4A5C93-218D-410E-90CB-9B194D4CA909}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,6 +122,15 @@ Global
 		{3747CEE1-3420-47C1-BC19-FCE58CC8636E} = {01E36C36-FB9B-4946-9872-F8B8B1CDC59A}
 		{767104A5-1187-4563-831D-666392B279A9} = {AF19CB6E-E4DC-4A8D-879B-F38F492FC963}
 		{872B57B0-921B-47AA-8D19-DE79BBB21F5C} = {9307B236-D2B2-4526-84C0-C38C0430A063}
+		{E94F58C3-7948-4AE4-9D6C-9712262BDE9C} = {62E98323-2F4B-4504-A39D-9298F8D2D1EA}
+		{1064B67E-5DC9-4AD4-B0F0-E82302368BDF} = {E94F58C3-7948-4AE4-9D6C-9712262BDE9C}
+		{DF6635E9-11AA-4CC1-92F5-B38B5782AD7E} = {E94F58C3-7948-4AE4-9D6C-9712262BDE9C}
+		{13294388-335B-41D5-8B3E-4D0DADB2288B} = {E94F58C3-7948-4AE4-9D6C-9712262BDE9C}
+		{CEF46290-527A-4E34-9B88-594E2799038D} = {E94F58C3-7948-4AE4-9D6C-9712262BDE9C}
+		{74B94552-249C-4E71-82D4-89FFEC22933A} = {1064B67E-5DC9-4AD4-B0F0-E82302368BDF}
+		{11F9956D-3FBF-406A-97DB-39D42FA2A826} = {DF6635E9-11AA-4CC1-92F5-B38B5782AD7E}
+		{03AE20DD-9740-4D3A-8FB8-716F9CE1325C} = {13294388-335B-41D5-8B3E-4D0DADB2288B}
+		{2A4A5C93-218D-410E-90CB-9B194D4CA909} = {CEF46290-527A-4E34-9B88-594E2799038D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0D645A8E-370E-4F1E-83DE-46534DA6A0D7}
