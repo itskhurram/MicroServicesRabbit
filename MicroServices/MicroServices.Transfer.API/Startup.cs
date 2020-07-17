@@ -5,8 +5,11 @@ using System.Threading.Tasks;
 
 using MediatR;
 
+using MicroServices.Domain.Core.Bus;
 using MicroServices.Infrastructure.IOC;
 using MicroServices.Transfer.Data.Context;
+using MicroServices.Transfer.Domain.EventHandlers;
+using MicroServices.Transfer.Domain.Events;
 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -70,6 +73,14 @@ namespace MicroServices.Transfer.API
             {
                 swui.SwaggerEndpoint("/swagger/v1/swagger.json", "Transfer Microservice V1");
             });
+
+            ConfigureEventBus(app);
+        }
+
+        private void ConfigureEventBus(IApplicationBuilder app)
+        {
+            var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
+            eventBus.Subscribe<TransferCreatedEvent, TransferEventHandler>();
         }
     }
 }

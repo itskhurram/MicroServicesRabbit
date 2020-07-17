@@ -13,6 +13,8 @@ using MicroServices.Transfer.Application.Interfaces;
 using MicroServices.Transfer.Application.Services;
 using MicroServices.Transfer.Data.Context;
 using MicroServices.Transfer.Data.Repository;
+using MicroServices.Transfer.Domain.EventHandlers;
+using MicroServices.Transfer.Domain.Events;
 using MicroServices.Transfer.Domain.Interfaces;
 
 using Microsoft.Extensions.DependencyInjection;
@@ -34,6 +36,7 @@ namespace MicroServices.Infrastructure.IOC
                 return new RabbitMQBus(mediator);
             });
 
+            services.AddTransient<IEventHandler<TransferCreatedEvent>, TransferEventHandler>();
             //Domain Banking Commands
             services.AddTransient<IRequestHandler<CreateTransferCommand,bool>, TransferCommandHandler>();
 
