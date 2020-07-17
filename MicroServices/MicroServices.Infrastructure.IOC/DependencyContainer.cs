@@ -33,9 +33,12 @@ namespace MicroServices.Infrastructure.IOC
             //services.AddTransient<IEventBus, RabbitMQBus>();
             services.AddSingleton<IEventBus, RabbitMQBus>(serviceProvider => {
                 var mediator = serviceProvider.GetService<IMediator>();
-                return new RabbitMQBus(mediator);
+                var scopeFactory = serviceProvider.GetRequiredService<IServiceScopeFactory>();
+                return new RabbitMQBus(mediator, scopeFactory);
             });
 
+            //subscription
+            services.AddTransient<TransferEventHandler>();
             services.AddTransient<IEventHandler<TransferCreatedEvent>, TransferEventHandler>();
             //Domain Banking Commands
             services.AddTransient<IRequestHandler<CreateTransferCommand,bool>, TransferCommandHandler>();

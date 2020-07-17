@@ -15,6 +15,13 @@ namespace MicroServices.Transfer.Data.Repository
         {
             _transferDbContext = transferDbContext;
         }
+
+        public void Add(TransferLog transferLog)
+        {
+            _transferDbContext.Add(transferLog);
+            _transferDbContext.SaveChanges();
+        }
+
         public IEnumerable<TransferLog> GetTransferLogs()
         {
             return _transferDbContext.TransferLogs;

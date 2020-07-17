@@ -1,5 +1,7 @@
 ﻿using MicroServices.Domain.Core.Bus;
 using MicroServices.Transfer.Domain.Events;
+using MicroServices.Transfer.Domain.Interfaces;
+using MicroServices.Transfer.Domain.Models;
 
 using System;
 using System.Collections.Generic;
@@ -10,12 +12,19 @@ namespace MicroServices.Transfer.Domain.EventHandlers
 {
     public class TransferEventHandler : IEventHandler<TransferCreatedEvent>
     {
-        public TransferEventHandler()
+        private readonly ITransferRepository _transferRepository;
+        public TransferEventHandler(ITransferRepository transferRepository)
         {
-
+            _transferRepository = transferRepository;
         }
         public Task Handle(TransferCreatedEvent @event)
         {
+            _transferRepository.Add(new TransferLog()
+            {
+                AccountFrom = @event.From,
+                AccountTo = @event.To,
+                TransferAmount = @event.Amount
+            });
             return Task.CompletedTask;
         }
     }
