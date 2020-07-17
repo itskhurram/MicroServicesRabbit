@@ -9,6 +9,11 @@ using MicroServices.Banking.Domain.Commands;
 using MicroServices.Banking.Domain.Interfaces;
 using MicroServices.Domain.Core.Bus;
 using MicroServices.Infrastructure.Bus;
+using MicroServices.Transfer.Application.Interfaces;
+using MicroServices.Transfer.Application.Services;
+using MicroServices.Transfer.Data.Context;
+using MicroServices.Transfer.Data.Repository;
+using MicroServices.Transfer.Domain.Interfaces;
 
 using Microsoft.Extensions.DependencyInjection;
 
@@ -34,10 +39,13 @@ namespace MicroServices.Infrastructure.IOC
 
             //Application Services
             services.AddTransient<IAccountService, AccountService>();
+            services.AddTransient<ITransferService, TransferService>();
 
             //Data
             services.AddTransient<IAccountRepository, AccountRepository>();
+            services.AddTransient<ITransferRepository, TransferRepository>();
             services.AddTransient<BankingDbContext>();
+            services.AddTransient<TransferDbContext>();
         }
     }
 }
