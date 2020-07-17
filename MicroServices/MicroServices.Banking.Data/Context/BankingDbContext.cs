@@ -2,16 +2,9 @@
 
 using Microsoft.EntityFrameworkCore;
 
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MicroServices.Banking.Data.Context
-{
-    public class BankingDbContext : DbContext
-    {
-        public BankingDbContext(DbContextOptions options): base(options)
-        {
+namespace MicroServices.Banking.Data.Context {
+    public class BankingDbContext : DbContext {
+        public BankingDbContext(DbContextOptions options) : base(options) {
 
         }
         public DbSet<Account> Accounts { get; set; }

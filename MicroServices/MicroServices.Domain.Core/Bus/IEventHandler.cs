@@ -2,14 +2,11 @@
 
 using System.Threading.Tasks;
 
-namespace MicroServices.Domain.Core.Bus
-{
+namespace MicroServices.Domain.Core.Bus {
     public interface IEventHandler<in TEvent> : IEventHandler
-        where TEvent: Event
-    {
+        where TEvent : Event {
         Task Handle(TEvent @event);
     }
-    public interface IEventHandler
-    {
+    public interface IEventHandler {
     }
 }

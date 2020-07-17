@@ -1,12 +1,9 @@
 ﻿using MediatR;
 
-namespace MicroServices.Domain.Core.Events
-{
-    public abstract class Message: IRequest<bool>
-    {
+namespace MicroServices.Domain.Core.Events {
+    public abstract class Message : IRequest<bool> {
         public string MessageType { get; protected set; }
-        protected Message()
-        {
+        protected Message() {
             MessageType = GetType().Name;
         }
     }

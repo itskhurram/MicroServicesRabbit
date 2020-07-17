@@ -19,16 +19,9 @@ using MicroServices.Transfer.Domain.Interfaces;
 
 using Microsoft.Extensions.DependencyInjection;
 
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MicroServices.Infrastructure.IOC
-{
-    public class DependencyContainer
-    {
-        public static void RegisterServices(IServiceCollection services)
-        {
+namespace MicroServices.Infrastructure.IOC {
+    public class DependencyContainer {
+        public static void RegisterServices(IServiceCollection services) {
             //Domain Bus
             //services.AddTransient<IEventBus, RabbitMQBus>();
             services.AddSingleton<IEventBus, RabbitMQBus>(serviceProvider => {
@@ -41,7 +34,7 @@ namespace MicroServices.Infrastructure.IOC
             services.AddTransient<TransferEventHandler>();
             services.AddTransient<IEventHandler<TransferCreatedEvent>, TransferEventHandler>();
             //Domain Banking Commands
-            services.AddTransient<IRequestHandler<CreateTransferCommand,bool>, TransferCommandHandler>();
+            services.AddTransient<IRequestHandler<CreateTransferCommand, bool>, TransferCommandHandler>();
 
             //Application Services
             services.AddTransient<IAccountService, AccountService>();
